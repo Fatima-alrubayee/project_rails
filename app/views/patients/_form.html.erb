@@ -33,7 +33,7 @@
   </div>
   <div class="field">
     <%= f.label :doctor_id %><br>
-    <%= f.text_field :doctor_id %>
+    <%= f.collection_select :doctor_id, Doctor.order(:first_name),:id,:first_name  %>
   </div>
   <div class="actions">
     <%= f.submit %>
