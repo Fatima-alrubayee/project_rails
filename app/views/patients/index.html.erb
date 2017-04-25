@@ -2,7 +2,7 @@
 
 <h1>Listing Patients</h1>
 
-<table>
+<table class="table table-hover">
   <thead>
     <tr>
       <th>First name</th>
@@ -22,9 +22,9 @@
         <td><%= patient.email %></td>
         <td><%= patient.phone_number %></td>
         <td><%= patient.state %></td>
-        <td><%= link_to 'Show', patient %></td>
-        <td><%= link_to 'Edit', edit_patient_path(patient) %></td>
-        <td><%= link_to 'Destroy', patient, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', patient, class:"btn btn-info" %></td>
+        <td><%= link_to 'Edit', edit_patient_path(patient), class:"btn btn-default" %></td>
+        <td><%= link_to 'Destroy', patient, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-danger" %></td>
       </tr>
     <% end %>
   </tbody>
@@ -32,4 +32,4 @@
 
 <br>
 
-<%= link_to 'New Patient', new_patient_path %>
+<%= link_to 'New Patient', new_patient_path, class:"btn btn-primary" %>
